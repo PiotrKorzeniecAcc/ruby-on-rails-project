@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container-fluid bg-dark text-light p-5">
+    <div class="container bg-dark p-5">
+        <h1 class="display-4">
+          <%= @friend.last_name%>, <%= @friend.first_name %>
+        </h1>
+        <hr>
+        <table class="table body-bg-black table-sm">
+          <tbody>
+            <tr>
+              <th scope="row" style="width: 15%">Email</th>
+              <td><%= @friend.email %></td>
+            </tr>
+            <tr>
+              <th scope="row">Birthday</th>
+              <td><%= @friend.birthday %></td>
+            </tr>
+            <tr>
+              <th scope="row">Points</th>
+              <td><%= @friend.points %></td>
+            </tr>
+            <tr>
+              <th scope="row">Best friend</th>
+              <td><%= @friend.best_friend %></td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-secondary" %>
+          <%= link_to "Back", friends_path, class:"btn btn-secondary" %>
+          <hr>
+          <%= button_to "Delete this friend", @friend, method: :delete, class:"btn btn-danger" %>
+        </div>
+    </div>
+</div>
