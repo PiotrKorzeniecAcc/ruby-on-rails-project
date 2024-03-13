@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :friends
   #get 'home/index'
   get 'home/about'
   root 'home#index' # definition of /home/index page as root page
