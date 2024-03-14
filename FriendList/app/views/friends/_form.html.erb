@@ -40,6 +40,10 @@
     <%= form.check_box :best_friend, class:"form-check-input" %>
     <%= form.label :best_friend, style: "display: block", class:"form-check-label" %>
   </div>
+
+  <div>
+    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value:current_user.id, type: :hidden %>
+  </div>
   </br>
   <div>
     <%= form.submit %>
